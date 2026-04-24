@@ -14308,3 +14308,9 @@
 2026-04-24T12:09:25.955Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
 2026-04-24T12:09:25.984Z [INFO]: Server running on port 3000
 2026-04-24T12:09:55.998Z [ERROR]: MongoDB connection error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+2026-04-24T12:44:34.311Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T12:44:34.339Z [INFO]: Server running on port 3000
+2026-04-24T12:44:35.424Z [INFO]: MongoDB connected successfully
+2026-04-24T13:07:41.278Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T13:07:41.342Z [INFO]: Server running on port 3000
+2026-04-24T13:07:42.228Z [INFO]: MongoDB connected successfully
