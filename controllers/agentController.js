@@ -46,15 +46,16 @@ exports.registerAgent = async (req, res, next) => {
       existing.hasGps = hasGps;
       existing.hasHighSpeedInternet = hasHighSpeedInternet;
       existing.experienceNotes = experienceNotes;
+      
 
       existing.agentStatus = "PENDING";
-      existing.reviewComment = "";
+  
 
       await existing.save();
 
       // 🔔 ✅ CREATE NOTIFICATION (RESUBMITTED)
       await Notification.create({
-        agentId: agent._id,
+        agentId: existing._id,
     type: "WELCOME",
     message: "Re-registration successfully.",
     sentAt: new Date(),
