@@ -19,8 +19,8 @@ connectDB();
 // Parse incoming JSON requests
 app.use(cors({
   origin: "https://elegant-babka-927e61.netlify.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 
