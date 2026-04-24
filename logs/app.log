@@ -14278,3 +14278,18 @@
 2026-04-24T08:46:21.868Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
 2026-04-24T08:46:21.886Z [INFO]: Server running on port 3000
 2026-04-24T08:46:21.898Z [INFO]: MongoDB connected successfully
+2026-04-24T09:35:29.211Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T09:35:29.231Z [INFO]: Server running on port 3000
+2026-04-24T09:35:29.263Z [INFO]: MongoDB connected successfully
+2026-04-24T10:27:42.801Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T10:27:42.819Z [INFO]: Server running on port 3000
+2026-04-24T10:27:42.823Z [ERROR]: MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.tyhl5zl.mongodb.net
+2026-04-24T10:32:00.715Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T10:32:00.734Z [INFO]: Server running on port 3000
+2026-04-24T10:32:00.738Z [ERROR]: MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.tyhl5zl.mongodb.net
+2026-04-24T10:39:47.198Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T10:39:47.210Z [INFO]: Server running on port 3000
+2026-04-24T10:39:47.214Z [ERROR]: MongoDB connection error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.tyhl5zl.mongodb.net
+2026-04-24T10:52:21.262Z [INFO]: Cloudinary configured successfully for cloud: dn5wwwqe8
+2026-04-24T10:52:21.332Z [INFO]: Server running on port 3000
+2026-04-24T10:52:22.729Z [INFO]: MongoDB connected successfully
