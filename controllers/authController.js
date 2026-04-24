@@ -110,7 +110,7 @@ exports.generateSetPasswordLink = async (user) => {
 // ✅ SET PASSWORD API
 exports.setPassword = async (req, res) => {
   try {
-    const { token, oldPassword, password } = req.body;
+    const { token, password } = req.body;
 
     // 🔍 Find user using token
     const user = await User.findOne({
@@ -124,16 +124,6 @@ exports.setPassword = async (req, res) => {
       });
     }
 
-    // =========================
-    // ✅ CHECK OLD PASSWORD
-    // =========================
-    const isMatch = await bcrypt.compare(oldPassword, user.password);
-
-    if (!isMatch) {
-      return res.status(400).json({
-        message: "Old password is incorrect"
-      });
-    }
 
     // =========================
     // 🔐 HASH NEW PASSWORD
