@@ -239,6 +239,7 @@ ${link}
   // 🔗 Update agent
   agent.userId = user._id;
   agent.agentStatus = "APPROVED";
+   agent.reviewComment = reviewComment || "Approved by admin";
 
 
   await agent.save();
