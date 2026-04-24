@@ -208,6 +208,7 @@ if (status === "APPROVED") {
     user.resetTokenExpiry = Date.now() + 15 * 60 * 1000;
 
     await user.save();
+    console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
 
     // 🔗 Create link
      link = `${process.env.FRONTEND_URL}/pages/set-password.html?token=${token}`;
