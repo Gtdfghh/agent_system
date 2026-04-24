@@ -272,6 +272,7 @@ ${link}
       }
 
       agent.agentStatus = "REJECTED";
+      agent.reviewComment = reviewComment;
     
 
       await agent.save();
