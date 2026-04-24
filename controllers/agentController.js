@@ -10,10 +10,8 @@ const crypto = require("crypto");
 
 // ================= REGISTER AGENT =================
 
-
 exports.registerAgent = async (req, res, next) => {
   try {
-
     let {
       email,
       displayName,
@@ -51,13 +49,13 @@ exports.registerAgent = async (req, res, next) => {
 
       await existing.save();
 
-      // 🔔 ✅ CREATE NOTIFICATION (RESUBMITTED)
+      // 🔔 ✅ FIX HERE (use existing, NOT agent)
       await Notification.create({
-        agentId: agent._id,
-    type: "WELCOME",
-    message: "Re-registration successfully.",
-    sentAt: new Date(),
-    status: "SENT"
+        agentId: existing._id,  // ✅ FIXED
+        type: "WELCOME",
+        message: "Re-registration successfully.",
+        sentAt: new Date(),
+        status: "SENT"
       });
 
       // 📧 Email
@@ -83,7 +81,7 @@ We will notify you soon.`
     // =========================
     if (existing) {
       return res.status(400).json({
-        message: "Email alreay exists"
+        message: "Email already exists"
       });
     }
 
@@ -106,13 +104,13 @@ We will notify you soon.`
 
     logger.info(`Agent saved: ${agent._id}`);
 
-    // 🔔 ✅ CREATE NOTIFICATION (NEW REGISTRATION)
+    // 🔔 Notification
     await Notification.create({
-     agentId: agent._id,
-    type: "WELCOME",
-    message: "Your form is under review.",
-    sentAt: new Date(),
-    status: "SENT"
+      agentId: agent._id,
+      type: "WELCOME",
+      message: "Your form is under review.",
+      sentAt: new Date(),
+      status: "SENT"
     });
 
     // 📧 Email
@@ -127,7 +125,7 @@ We will notify you soon.`
 
     logger.info(`Email sent to ${email}`);
 
-    res.status(201).json({
+    return res.status(201).json({
       agentId: agent._id,
       agentStatus: "PENDING",
       message: "Registration successful. Awaiting admin approval."
