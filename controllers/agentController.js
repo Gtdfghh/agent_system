@@ -11,7 +11,6 @@ const crypto = require("crypto");
 // ================= REGISTER AGENT =================
 
 
-
 exports.registerAgent = async (req, res, next) => {
   try {
 
@@ -46,16 +45,15 @@ exports.registerAgent = async (req, res, next) => {
       existing.hasGps = hasGps;
       existing.hasHighSpeedInternet = hasHighSpeedInternet;
       existing.experienceNotes = experienceNotes;
-      
 
       existing.agentStatus = "PENDING";
-  
+      existing.reviewComment = "";
 
       await existing.save();
 
       // 🔔 ✅ CREATE NOTIFICATION (RESUBMITTED)
       await Notification.create({
-        agentId: existing._id,
+        agentId: agent._id,
     type: "WELCOME",
     message: "Re-registration successfully.",
     sentAt: new Date(),
