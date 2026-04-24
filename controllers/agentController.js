@@ -210,7 +210,7 @@ if (status === "APPROVED") {
     await user.save();
 
     // 🔗 Create link
-    const link = `${process.env.FRONTEND_URL}/pages/set-password.html?token=${token}`;
+     link = `${process.env.FRONTEND_URL}/pages/set-password.html?token=${token}`;
 
     // 📧 Send email ONLY first time
     await sendEmail(
@@ -238,7 +238,7 @@ ${link}
   // 🔗 Update agent
   agent.userId = user._id;
   agent.agentStatus = "APPROVED";
-  agent.reviewComment = reviewComment || "Approved by admin";
+
 
   await agent.save();
 
@@ -270,7 +270,7 @@ ${link}
       }
 
       agent.agentStatus = "REJECTED";
-      agent.reviewComment = reviewComment;
+    
 
       await agent.save();
 
