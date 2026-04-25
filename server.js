@@ -18,7 +18,7 @@ connectDB();
 
 // Parse incoming JSON requests
 app.use(cors({
-  origin: "https://elegant-babka-927e61.netlify.app",
+  origin: "https://field-agent-onboarding-system.netlify.app",
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
