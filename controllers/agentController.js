@@ -261,14 +261,8 @@ ${link}
     // ======================
     if (status === "REJECTED") {
 
-      if (!reviewComment) {
-        return res.status(400).json({
-          message: "Review comment is required for rejection"
-        });
-      }
-
       agent.agentStatus = "REJECTED";
-      agent.reviewComment = reviewComment;
+       agent.reviewComment = reviewComment || "Rejected by admin";
     
 
       await agent.save();
