@@ -387,7 +387,7 @@ Please upload again.`;
         await sendEmail(
           agent.email,
           "Document Review Status (Retry)",
-          `Hello Agent,
+          `Hello ${agent.displayName},
 
 ${message}
 `
@@ -467,8 +467,11 @@ ${message}
     if (status === "APPROVED") {
       message = `
 Your documents have been approved.
+
 Your onboarding is now complete, and your account is fully activated.
+
 You can log in and start using the system.
+
 We are excited to have you onboard!`
     } else {
       message = `Your documents have been rejected.
