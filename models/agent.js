@@ -58,6 +58,10 @@ const agentSchema = new mongoose.Schema({
     enum: ["PENDING","ACTIVE" ,"APPROVED", "REJECTED", "SUSPENDED"],
     default: "PENDING"
   },
+  reviewComment: {
+    type: String,
+    default: ""
+  }
  
 
 }, { timestamps: true }); // Automatically adds createdAt & updatedAt
