@@ -488,7 +488,7 @@ Please upload again.`;
       await sendEmail(
         agent.email,
         "Document Review Status",
-        `Hello Agent,
+        `Hello ${agent.displayName},
 
 ${message}
 `
