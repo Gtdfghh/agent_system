@@ -197,7 +197,19 @@ exports.uploadDocument = async (req, res, next) => {
       });
     }
 
-    await Document.insertMany(documentsToSave);
+    for (let doc of documentsToSave) {
+  await Document.findOneAndUpdate(
+    {
+      submissionId: doc.submissionId,
+      docType: doc.docType   // PAN / AADHAAR / PHOTO
+    },
+    doc,
+    {
+      upsert: true,  // create if not exists
+      new: true
+    }
+  );
+}
 
     res.status(201).json({
       message: "Documents uploaded successfully",
