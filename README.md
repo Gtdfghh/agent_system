@@ -1,12 +1,12 @@
 **Field Agent Onboarding and Document Verification Workflow – Backend**
 
- Overview
+** Overview**
 
 This repository contains the backend of the Field Agent Onboarding and Document Verification Workflow project.
 
 The backend is responsible for managing field agent registration, authentication, document submission, verification workflow, and communication between the frontend and the database through APIs.
 
- Key Features
+** Key Features**
 
 * Field agent registration and login
 * Secure authentication and authorization
@@ -18,7 +18,7 @@ The backend is responsible for managing field agent registration, authentication
 * REST API integration with the frontend
 * Database management for agent and document information
 
- Backend Responsibilities
+ **Backend Responsibilities**
 
 The backend handles:
 
@@ -30,8 +30,8 @@ The backend handles:
 * Updating document verification status
 * Storing and retrieving data from the database
 * Sending appropriate API responses to the frontend
-
- Project Workflow
+**
+ Project Workflow**
 
 1. A field agent registers through the frontend.
 2. Registration details are sent to the backend through APIs.
@@ -41,8 +41,8 @@ The backend handles:
 6. The admin/reviewer verifies the submitted documents.
 7. The verification status is updated as Pending, Approved, or Rejected.
 8. The updated status is displayed to the field agent through the frontend.
-
-Project Structure
+**
+Project Structure**
 
 
 backend/
@@ -57,8 +57,8 @@ backend/
 └── server.js         # Backend entry point
 
 
-
-API Functionality
+**
+API Functionality**
 
 The backend provides APIs for operations such as:
 
@@ -71,25 +71,25 @@ The backend provides APIs for operations such as:
 * Verification status tracking
 * Admin/reviewer operations
 
- Frontend Integration
+** Frontend Integration**
 
 The frontend of this project is maintained in a separate GitHub repository.
 
 The frontend communicates with this backend using REST API requests. Make sure the backend server is running and the correct backend API URL is configured in the frontend before running the complete application.
 
- Security
+** Security**
 
 * Sensitive credentials should be stored using environment variables.
 * Passwords should be securely hashed before database storage.
 * Protected API routes should use authentication and authorization.
 * Uploaded documents should be validated before processing.
 * The `.env` file should never be committed to GitHub.
-
- Purpose
+**
+ Purpose**
 
 The main purpose of this project is to simplify and digitize the field agent onboarding process. It provides an organized workflow for collecting agent information, submitting required documents, verifying those documents, and tracking onboarding status efficiently.
-
-Future Enhancements
+**
+Future Enhancements**
 
 * Email or SMS notifications for verification updates
 * Automated document validation
@@ -97,10 +97,10 @@ Future Enhancements
 * Role-based access control
 * Improved admin dashboard
 * Audit logs for document verification activities
-
-Author
-
-Joshal Fernandes
+**
+Author**
+**
+Joshal Fernandes**
 
 Computer Science and Engineering
 IoT with Cybersecurity and Blockchain Technology
