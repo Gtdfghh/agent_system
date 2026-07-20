@@ -89,13 +89,6 @@ The application uses a database to store and manage field agent information, aut
 
 ![Agent Database](screenshots/database-agents.png)
 
-### User Data
-
-![User Database](screenshots/database-users.png)
-
-### Document Data
-
-![Document Database](screenshots/database-documents.png)
 
 ## Installation and Setup
 
