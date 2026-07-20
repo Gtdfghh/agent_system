@@ -59,6 +59,44 @@ backend/
 
 > The exact folder structure may vary depending on the implementation.
 
+## Technologies Used
+
+- **Node.js** – Used as the backend runtime environment.
+- **Express.js** – Used to build RESTful APIs and handle HTTP requests.
+- **MongoDB** – Used as the database for storing field agent, user, and document-related information.
+- **Mongoose** – Used for MongoDB object modeling and database operations.
+- **JWT (JSON Web Token)** – Used for secure authentication and authorization.
+- **bcrypt** – Used for securely hashing user passwords.
+- **Multer** – Used for handling document/file uploads.
+- **REST API** – Used for communication between the frontend and backend.
+- **Postman** – Used for testing and validating backend API endpoints.
+- **Git & GitHub** – Used for version control and source code management.
+
+## Backend API Testing
+
+The backend REST APIs were tested using **Postman** to verify that different operations such as registration, login, agent management, document submission, and verification were working correctly.
+
+
+### Document Submission API
+
+![Document Verification API](screenshots/postman-document-submission.png)
+
+## Database Screenshots
+
+The application uses a database to store and manage field agent information, authentication details, submitted documents, and verification status.
+
+### Agent Data
+
+![Agent Database](screenshots/database-agents.png)
+
+### User Data
+
+![User Database](screenshots/database-users.png)
+
+### Document Data
+
+![Document Database](screenshots/database-documents.png)
+
 ## Installation and Setup
 
 ### 1. Clone the Repository
